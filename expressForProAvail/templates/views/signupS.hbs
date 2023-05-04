@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProAvail-Sign Up-Seeker</title>
+    <link rel="stylesheet" href="css/styles-sign-up-seeker.css">
+    <script> 
+        function matchPassword(){
+            var pw1=document.getElementById("password");
+            var pw2=document.getElementById("confirmpassword");
+            if(pw1!=pw2){
+                alert("Passwords did not match");
+            }
+        }
+    </script>
+</head>
+<body>
+    {{>header_signS}}
+    <main>
+        <div class="section1">
+            <h3>SIGN UP</h3>
+            <img src="Images/sign-up-seeker.png" alt="" width="100%">
+        </div>
+        <div class="section2">
+            <form action="/signupS" method="POST">
+                <div class="field1">
+                    <label for="fname">FIRST NAME</label><br>
+                    <input type="text" name="fname" id="fname">
+                </div>
+                <div class="field2">
+                    <label for="lname">LAST NAME</label><br>
+                    <input type="text" name="lname" id="lname">
+                </div>
+                <div class="field12">
+                    <label for="uname">USERNAME</label><br>
+                    <input type="text" name="uname" id="uname">
+                </div>
+                <div class="field3">
+                    <label for="phone">PHONE NO.</label><br>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div class="field4">
+                    <label for="email">E-MAIL</label><br>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="field5">
+                    <label for="address">ADDRESS</label><br>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="field6">
+                    <label for="city">CITY</label><br>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div class="field7">
+                    <label for="pincode">PINCODE</label><br>
+                    <input type="text" name="pincode" id="pincode" inputmode="numeric" maxlength="6">
+                </div>
+                <div class="field8">
+                    <p>GENDER</p>
+                    <input type="radio" name="gender" id="gender-1" value="male">
+                    <label for="gender-1">MALE</label>
+                    <input type="radio" name="gender" id="gender-2" value="female">
+                    <label for="gender-2">FEMALE</label>
+                    <input type="radio" name="gender" id="gender-3" value="other">
+                    <label for="gender-3">OTHER</label>
+                </div>
+                <div class="field9">
+                    <label for="password">PASSWORD</label><br>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="field10">
+                    <label for="confirmpassword">CONFIRM PASSWORD</label><br>
+                    <input type="password" name="confirmpassword" id="confirmpassword">
+                </div>
+                <div class="field11">
+                    <input type="submit" onclick="matchPassword()" value="SUBMIT">
+                </div>
+            </form>
+        </div>
+    </main>
+    {{>footer}}
+</body>
+</html>

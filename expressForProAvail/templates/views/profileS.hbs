@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-profile-seeker.css">
+    <title>ProAvail-Profile-Seeker</title>
+    <script>
+        function enable() {
+            document.getElementById("phone").disabled = false;
+            document.getElementById("email").disabled = false;
+            document.getElementById("address").disabled = false;
+            document.getElementById("city").disabled = false;
+            document.getElementById("pincode").disabled = false;
+            document.getElementById("fname").disabled = false;
+            document.getElementById("lname").disabled = false;
+            document.getElementById("gender").disabled = false;
+            document.getElementById("edit").style.display ="none";
+            document.getElementById("phone").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("email").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("address").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("city").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("pincode").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("fname").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("lname").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("gender").style.backgroundColor="rgba(220, 244, 212,0.3)";
+            document.getElementById("save-button").style.display ="block";
+            }
+            function edit() {
+                document.getElementById("city").value="Chandigarh";
+                document.getElementById("phone").disabled = true;
+                document.getElementById("email").disabled = true;
+                document.getElementById("address").disabled = true;
+                document.getElementById("city").disabled = true;
+                document.getElementById("pincode").disabled = true;
+                document.getElementById("fname").disabled = true;
+                document.getElementById("lname").disabled = true;
+                document.getElementById("gender").disabled = true;
+                document.getElementById("edit").style.display ="block";
+                document.getElementById("phone").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("email").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("address").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("city").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("pincode").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("fname").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("lname").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("gender").style.backgroundColor="rgb(220, 244, 212)";
+                document.getElementById("save-button").style.display ="none";
+                }
+    </script>
+</head>
+<body>
+    {{>header_dashboardS}}
+    <main>
+        <form action="">
+            <div class="side-nav">
+                <h2>My Account</h2>
+                <hr width=60px; size="4px" align="center" noshade="noshade" color="#30d5c8">
+                <div class="links">
+                    <a href="">My Profile</a>
+                    <a href="">Change Password</a>
+                    <a href="">Notifications</a>
+                    <a href="">Reviews</a>
+                    <a href="">Favorites</a>
+                    <a href="">Delete Account</a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="top">
+                    <img src="Images/user-icon-big.png" alt="" width="150px" class="ppic">
+                    <div class="edit-h">
+                        <h3>My Profile</h3>
+                        <div class="edit" id="edit">
+                            <button onclick="enable()" class="edit-button" type="button"> EDIT PROFILE</button>
+                            <img src="Images/edit.png" alt="" width="20px">
+                        </div>
+                        <button onclick="edit()" class="save-button" type="button" id="save-button"> SAVE CHANGES</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <div>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" value="Saneha" disabled>
+                    </div>
+                    <div>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" value="Garg" disabled>
+                    </div>
+                    <div>
+                        <label for="phone">Phone No.:</label>
+                        <input type="tel" id="phone" name="phone" value="6239098970" disabled>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="sgarg3_be21@thapar.edu" disabled>
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" value="Sirhind Road, Bhadson" disabled>
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" value="Patiala" disabled>
+                    </div>
+                    <div>
+                        <label for="pincode">Pincode:</label>
+                        <input type="text" id="pincode" name="pincode" value="147202" disabled>
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" name="gender" value="Female" disabled>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    {{>footer}}
+</body>
+</html> 
+    

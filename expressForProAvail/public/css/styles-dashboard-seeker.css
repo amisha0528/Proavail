@@ -1,0 +1,308 @@
+@font-face {
+    font-family: myfont;
+    src: url(../font/Oxygen/Oxygen-Bold.ttf);
+}
+@font-face {
+    font-family: myfont-l;
+    src: url(../font/Oxygen/Oxygen-Light.ttf);
+}
+@font-face {
+    font-family: myfont-r;
+    src: url(../font/Oxygen/Oxygen-Regular.ttf);
+}
+html, body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    font-family: myfont;
+    
+}
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    border-bottom: 1px black solid;
+    background-color: white;
+    height: 45px;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+
+}
+header a{
+    color: #194747;
+}
+.logo{
+    float: left;
+    text-decoration: none;
+    padding: 6px 20px;
+}
+.nav{
+    float: right;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.minnav-w{
+    position: relative;
+    float: right;
+}
+.tri{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left:transparent solid 5px ;
+    border-right:transparent solid 5px ;
+    border-top:transparent solid 5px ;
+    border-bottom:#194747 solid 5px ;
+    right: 7px;
+    top: -10px;
+}
+.minnav{
+    position: absolute;
+    display: none;
+    float: right;
+    border: #194747 solid 2px;
+    border-radius: 2px;
+    width: 100px;
+    right: 20px;
+    padding: 10px;
+    top: 45px;
+}
+.minnav a{
+    text-decoration: none;
+    color: #194747;
+    display: block;
+}
+.minnav-w:hover .minnav,.minnav-w:hover .tri{
+    display: block;
+}
+.background{
+    margin-top:44px;
+    width: 100%;
+    background-color: rgba(8, 100, 100,0.23);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    line-height: 20px;
+    height: 438px;
+    grid-template-rows: 438px;
+}
+.background .content{
+    grid-column: 2/3;
+    margin: 10px;
+}
+.background img{
+    grid-column: 1/2;
+    margin: 0px;
+    padding: 0px;
+}
+.background .content h1{
+    font-size: 60px;
+    color: #194747;   
+}
+.background .content h2{
+    font-size: 40px;
+    color: #194747;   
+}
+.home-services{
+    text-align: center;
+    padding: 40px 60px;
+    position: relative;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: #0b6407 dashed;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 30px 20px;
+    margin: 50px;
+}
+.s11{
+    grid-column: 2/3;
+}
+.hiw{
+    width: 100%;
+    background-color: #194747;
+}
+.how-it-works{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: auto auto;
+    padding: 30px;
+    justify-items: center;
+    text-align: center;
+}
+.sub-options-s5{
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(118, 204, 209, 0.85);
+    padding: 10px;
+    width: 15%;
+    border: #194747 solid 3px;
+    border-radius: 15px;
+    right: 320px;
+    top: 167px;
+}
+.sub-options-s13{
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(118, 204, 209, 0.85);
+    padding: 10px;
+    width: 15%;
+    border: #194747 solid 3px;
+    border-radius: 15px;
+    right: 135px;
+    top: 517px;
+}
+.sub-options-s6{
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(118, 204, 209, 0.85);
+    padding: 10px;
+    width: 15%;
+    border: #194747 solid 3px;
+    border-radius: 15px;
+    left: 320px;
+    top: 352px;
+}
+.subnav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #194747;
+}
+.triangle-s5{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left:#194747 solid 10px ;
+    border-right:transparent solid 10px ;
+    border-top:transparent solid 10px ;
+    border-bottom:transparent solid 10px ;
+    right: -20px;
+    top: 50px;
+}
+.triangle-s13{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left:transparent solid 10px ;
+    border-right:#194747 solid 10px ;
+    border-top:transparent solid 10px ;
+    border-bottom:transparent solid 10px ;
+    left: -20px;
+    top: 50px;
+}
+.triangle-s6{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left:transparent solid 10px ;
+    border-right:#194747 solid 10px ;
+    border-top:transparent solid 10px ;
+    border-bottom:transparent solid 10px ;
+    left: -20px;
+    top: 50px;
+}
+.s5:hover .sub-options-s5,.s5:hover .triangle-s5{
+    display: block;
+}
+.s6:hover .sub-options-s6,.s6:hover .triangle-s6{
+    display: block;
+}
+.s13:hover .sub-options-s13,.s13:hover .triangle-s13{
+    display: block;
+}
+.s5:hover,.s6:hover,.s13:hover{
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    background-color: #194747;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 38px;
+}
+.bottom{
+    grid-column: 1/5;
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding-top: 6px;
+}
+.bottom p{
+    display: inline;
+    padding-left: 25px;
+    opacity: 0.7;
+}
+.bottom img{
+    -webkit-filter: grayscale(1) invert(1);
+   filter: grayscale(1) invert(1);
+}
+.sm{
+    padding: 3px 10px;
+    opacity: 0.8;
+}
+.sm2{
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 25px;
+    opacity: 0.8;
+}
+.bottom a{
+    float: right;
+}
+.flogo{
+    padding: 60px 50px;
+}
+.fcontent{
+    margin-top: 0px;
+    padding: 30px;
+    text-align: justify;
+    color: #c2cad6;
+    opacity: 0.8;
+    font-family: myfont-r;
+    line-height: 25px;
+    font-size: 17px;
+}
+.nav2{
+    opacity: 0.8;
+    text-align: center;
+    line-height: 30px;
+    padding: 30px;
+}
+.nav2 a{
+    text-decoration: none;
+    color: #c2cad6;  
+    font-size: 19px; 
+}
+.contact{
+    color: #c2cad6;
+    opacity: 0.8;
+    line-height: 10px;
+    padding-top: 30px;
+    padding-right: 70px;
+    align-self: start;
+    justify-self: end;
+}
+.contact p{
+    text-align: right;
+    font-family: myfont-l;
+    font-size: 17px; 
+}
+.contact .main{
+    font-family: myfont;
+    font-size: 19px; 
+}
+

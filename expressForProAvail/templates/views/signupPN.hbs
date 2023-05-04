@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProAvail-Sign Up-Provider</title>
+    <link rel="stylesheet" href="css/styles-sign-up-provider-next.css">
+</head>
+<body>
+    {{>header_signPN}}
+    <main>
+        <div class="section1">
+            <h3>SIGN UP</h3>
+            <form action="/upload" method="POST">
+                <input id="ppic" type="file" name="avatar" accept="image/*"/><br>
+                <button type="submit">Upload</button>
+                <label for="ppic">PROFILE PHOTO</label>
+            </form>
+            <form action="/upload" method="POST">
+                <div class="field3">
+                    <label for="verdoc">VERIFICATION</label><br>
+                    <input id="verdoc" type="file" name="verification"/>
+                     <button type="submit">Upload</button>   
+                </div>
+            </form>
+        </div>
+        <div class="section2">
+            <h3>SERVICES</h3>
+            <form action="/signupP" method="POST">
+                <div class="c1">
+                    <input type="checkbox" id="s1" name="services" value="Electrician">
+                    <label for="s1">Electrician</label>
+                </div>
+                <div class="c2">
+                    <input type="checkbox" id="s2" name="services" value="Plumber">
+                    <label for="s2">Plumber</label>
+                </div>
+                <div class="c3">
+                    <input type="checkbox" id="s3" name="services" value="Carpenter">
+                    <label for="s3">Carpenter</label>
+                </div>
+                <div class="c4">
+                    <input type="checkbox" id="s4" name="services" value="Home Painting">
+                    <label for="s4">Home Painting</label>
+                </div>
+                <div class="c5">
+                    <input type="checkbox" id="s5" name="services" value="Cleaning & Pest Control">
+                    <label for="s5">Cleaning & Pest Control</label>
+                </div>
+                <div class="c6">
+                    <input type="checkbox" id="s6" name="services" value="Appliance Repair">
+                    <label for="s6">Appliance Repair</label>
+                </div>
+                <div class="c7">
+                    <input type="checkbox" id="s7" name="services" value="Blacksmith">
+                    <label for="s7">Blacksmith</label>
+                </div>
+                <div class="c8">
+                    <input type="checkbox" id="s8" name="services" value="Glass Repair">
+                    <label for="s8">Glass Repair</label>
+                </div>
+                <div class="c9">
+                    <input type="checkbox" id="s9" name="services" value="Technician">
+                    <label for="s9">Technician</label>
+                </div>
+                <div class="c10">
+                    <input type="checkbox" id="s10" name="services" value="Movers & Packers">
+                    <label for="s10">Movers & Packers</label>
+                </div>
+                <div class="c11">
+                    <input type="checkbox" id="s11" name="services" value="Gardener">
+                    <label for="s11">Gardener</label>
+                </div>
+                <div class="c12">
+                    <input type="checkbox" id="s13" name="services" value="Laundry">
+                    <label for="s13">Laundry</label>
+                </div>
+                <div class="c13">
+                    <input type="checkbox" id="s13" name="services" value="Beauty Services">
+                    <label for="s13">Beauty Services</label>
+                </div>
+                <div class="field1">
+                    <label for="timing">TIMING</label><br>
+                    <input type="text" name="timing" id="timing">
+                </div>
+                <div class="field2">
+                    <label for="days">DAYS</label><br>
+                    <input type="text" name="days" id="days">
+                </div>
+                
+                <div class="field4">
+                    <input type="submit" value="SUBMIT">
+                </div>
+            </form>
+        </div>
+    </main>
+    {{>footer}}
+</body>
+</html>

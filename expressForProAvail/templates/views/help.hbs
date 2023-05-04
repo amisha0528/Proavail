@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-help.css">
+    <title>ProAvail-Help</title>
+    <script>
+        function confirm(){
+            alert("Query sent!");
+        }
+    </script>
+</head>
+<body>
+    {{>header_help}}
+    <div class="background">
+        <img src="Images/help-background-image.png" alt="background" width="650px">
+        <div class="content">
+            <h1>For Any Query</h1>
+            <h2>CONTACT US</h2>
+            <hr width=80px; size="4px" align="center" noshade="noshade" color="#41a291">
+            <form action="/help" method = "POST">
+                <input type="text" name="fname" id="fname" placeholder="First Name">
+                <input type="text" name="lname" id="lname" placeholder="Last Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <textarea name="question" id="question" cols="30" rows="10" placeholder="Question"></textarea>
+                <input type="submit" onclick="confirm()" value="SEND" id="button">
+            </form>
+        </div>
+    </div>   
+    <div class="faqs">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <hr width=60px; size="4px" align="center" noshade="noshade" color="#30d5c8">
+        <div class="questions">
+            <div class="q1">
+                <img src="Images/question-mark.png" alt="">
+                <p class="q">What is ProAvail ?</p>
+                <p class="a">ProAvail is an online platform which makes it easier for you to contact with people according to your requirements that will provide you better service without any extra burden and will reduce your overall headache.</p>
+            </div>
+            <div class="q2">
+                <img src="Images/question-mark.png" alt="">
+                <p class="q">How does ProAvail will help me ?</p>
+                <p class="a">This is very easy to use. Just go to our website and How it works section in about us handle will guide you to go further.</p>
+            </div>
+            <div class="q3">
+                <img src="Images/question-mark.png" alt="">
+                <p class="q">Why should I choose ProAvail rather than any other website ?</p>
+                <p class="a">Our website helps you to contact with verified professionals who will guide and solve your problem with minimum effort and cost as possible.</p>
+            </div>
+            <div class="q4">
+                <img src="Images/question-mark.png" alt="">
+                <p class="q">How do I pay the service provider?</p>
+                <p class="a">You can pay by cash directly to the service provider or by various online payment options as per mutual agreement between you and service provider.</p>
+            </div>
+            <div class="q5">
+                <img src="Images/question-mark.png" alt="">
+                <p class="q">How can I register on ProAvail?</p>
+                <p class="a">You can register on this platform by filling your details in the provided form and by sharing your identity card , professional proof or any other document for verification procedure. After this , you can Sign in  and you are good to go.</p>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>
